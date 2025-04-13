@@ -122,6 +122,24 @@ const FeatureSection = styled.div`
   position: relative;
 `;
 
+const GithubButton = styled(motion.a)`
+  display: inline-block;
+  background: linear-gradient(120deg, #6366f1, #8b5cf6);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+`;
+
 const features = [
   {
     title: 'Intelligent Content Moderation',
@@ -244,6 +262,16 @@ const App = () => {
         >
           Created by Jacob Maynard, Edward Stanford, Griffin Walker, and Ethan Gilmore.
         </Subtitle2>
+        <GithubButton
+          href="https://github.com/InfinityBowman/bethere-landing"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+        >
+          View source code for this site -&gt;
+        </GithubButton>
       </HeroContent>
     </Container>
   );
