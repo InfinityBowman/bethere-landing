@@ -10,6 +10,8 @@ import BeThereGif4 from './assets/BeThere Midpoint_4.gif';
 import BeThereGif from './assets/BeThere Midpoint.gif';
 import TechSection from './components/TechSection.jsx';
 import Feature from './components/Feature.jsx';
+import Navbar from './components/Navbar.jsx';
+// import OurTeam from './components/OurTeam.jsx';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -79,7 +81,7 @@ const Subtitle = styled(motion.p)`
 `;
 
 const Subtitle2 = styled(motion.p)`
-  font-size: clamp(1.1rem, 3vw, 1rem);
+  font-size: clamp(1rem, 3vw, 1rem);
   color: #94a3b8;
   margin-bottom: 1rem;
   line-height: 1.6;
@@ -88,7 +90,11 @@ const Subtitle2 = styled(motion.p)`
 const LogoWrapper = styled(motion.div)`
   position: relative;
   width: 520px;
-  margin: 2rem auto 10rem auto;
+  margin: 4rem auto 10rem auto;
+
+  @media (max-width: 768px) {
+    width: 320px;
+  }
 `;
 
 const Logo = styled(motion.img)`
@@ -130,10 +136,10 @@ const GithubButton = styled(motion.a)`
   border-radius: 8px;
   text-decoration: none;
   font-size: 1rem;
-  margin-top: 1rem;
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
   &:hover {
     transform: translateY(-2px);
@@ -197,6 +203,7 @@ const App = () => {
   ];
   return (
     <Container>
+      <Navbar />
       <HeroContent>
         <TitleContent
           initial={{ opacity: 0, y: 20 }}
@@ -243,7 +250,7 @@ const App = () => {
             in real-time.
           </Subtitle>
         </TitleContent>
-        <FeatureSection>
+        <FeatureSection id="features">
           {features.map((feature, index) => (
             <Feature
               key={index}
@@ -255,12 +262,13 @@ const App = () => {
           ))}
         </FeatureSection>
         <TechSection />
+        {/* <OurTeam /> */}
         <Subtitle2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          Created by Jacob Maynard, Edward Stanford, Griffin Walker, and Ethan Gilmore.
+          Web presence created by Jacob Maynard.
         </Subtitle2>
         <GithubButton
           href="https://github.com/InfinityBowman/bethere-landing"

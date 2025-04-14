@@ -69,7 +69,7 @@ const itemVariants = {
 
 const TechSection = () => {
   return (
-    <TechSectionDiv>
+    <TechSectionDiv id="tech">
       <Title
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
