@@ -42,11 +42,11 @@ const TeamMemberCardDiv = styled(motion.div)`
 `;
 
 const ImageWrapper = styled.div`
-  flex: 0 0 300px;
+  flex: 0 0 350px;
 
   img {
     width: 100%;
-    height: 300px;
+    height: 350px;
     object-fit: cover;
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
@@ -73,6 +73,7 @@ const Content = styled.div`
 
 const SocialLinks = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
 `;
@@ -97,7 +98,7 @@ const SocialLink = styled.a`
 `;
 
 const BioText = styled(motion.p)`
-  color: #94a3b8;
+  color:rgb(158, 172, 191);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   overflow: hidden;
@@ -108,7 +109,7 @@ const BioText = styled(motion.p)`
 const ReadMoreButton = styled.button`
   background: transparent;
   border: none;
-  color: rgb(197, 118, 249);
+  color: rgba(197, 118, 249, 0.85);
   cursor: pointer;
   font-size: 0.9rem;
   padding: 0;
@@ -127,7 +128,7 @@ const teamMembers = [
 
     My focus lies in building elegant, user-centered interfaces that seamlessly blend functionality with design. I enjoy the challenge of making complex ideas feel simple and intuitive, and I strive to make the web more accessible and responsive for all users. Whether it’s through performance optimization, accessibility improvements, or crafting clean, maintainable code, I’m always looking to push the boundaries of what I can create.
 
-    Outside of my academic work and internship, I’m constantly working on personal projects to sharpen my skills. This summer, I plan to develop and publish my own NPM library, contributing to the open-source community while learning even more about package design and distribution.
+    Outside of my academic work and internship, I’m constantly working on personal projects to sharpen my skills as well as some music production. This summer, I plan to develop and publish my own NPM library, contributing to the open-source community while learning even more about package design and distribution.
 
     I also have a strong interest in data science and machine learning, especially when it comes to creating insightful and visually compelling data visualizations. I love finding ways to understand and tell stories through data, making the complex more understandable and engaging.
 
@@ -140,7 +141,11 @@ const teamMembers = [
   },
   {
     name: 'Edward Stanford',
-    bio: 'TBD',
+    bio: `My name is Edward Stanford, and I am currently pursuing a Bachelor of Science in Computer Science with a Minor in Mathematics. Throughout my academic journey, I have developed a strong interest in computer systems and programming languages, areas that challenge me to think critically about the underlying structure and logic of technology. I am also drawn to game development, especially the creative and technical balance it requires.
+
+    As part of my senior capstone project, I am developing BeThere, a mobile application focused on photo sharing during social events. The app aims to make it easier for users to capture, organize, and share memories with friends in real-time. This project has allowed me to apply both my technical skills and creative problem-solving in a collaborative development setting, using technologies such as React Native and cloud-based services.
+
+    Beyond academics, I enjoy reading and gaming—activities that not only help me unwind but also inspire new ideas and approaches to problem-solving. Whether I’m exploring the mechanics of a well-designed game or diving into a thought-provoking book, I find these interests complement my growth as a developer. I look forward to continuing to build meaningful software and exploring opportunities in systems programming and language design after graduation.`,
     image: EdwardStanford,
     email: 'edwardstanford7@gmail.com',
     linkedin: 'https://www.linkedin.com/in/edward-stanford747/',
@@ -148,7 +153,7 @@ const teamMembers = [
   },
   {
     name: 'Ethan Gilmore',
-    bio: 'TBD',
+    bio: `TBD`,
     image: EthanGilmore,
     email: 'ethanmckgilmore@gmail.com',
     linkedin: 'https://www.linkedin.com/in/ethangilmore/',
@@ -156,7 +161,7 @@ const teamMembers = [
   },
   {
     name: 'Griffin Walker',
-    bio: 'TBD',
+    bio: `TBD`,
     image: GriffinWalker,
     email: 'grifwalker13@gmail.com',
     linkedin: 'https://www.linkedin.com/in/griffin-walker-a6972030a/',
