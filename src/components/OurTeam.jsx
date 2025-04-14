@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { motion } from 'framer-motion';
 import EthanGilmore from '../assets/ethan_gilmore.jpeg';
-import GriffinWalker from '../assets/griffin_walker.jpeg';
+import GriffinWalker from '../assets/griffin_walker.jpg';
 import EdwardStanford from '../assets/edward_stanford.jpeg';
 import JacobMaynard from '../assets/jacob_maynard.jpeg';
 
