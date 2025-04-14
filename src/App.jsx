@@ -137,7 +137,7 @@ const GithubButton = styled(motion.a)`
   display: inline-block;
   background: linear-gradient(120deg, #6366f1, #8b5cf6);
   color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.1rem;
   border-radius: 8px;
   text-decoration: none;
   font-size: 1rem;

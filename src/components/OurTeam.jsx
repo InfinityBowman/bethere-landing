@@ -98,7 +98,7 @@ const SocialLink = styled.a`
 `;
 
 const BioText = styled(motion.p)`
-  color:rgb(158, 172, 191);
+  color:rgb(189, 201, 218);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   overflow: hidden;
@@ -109,7 +109,7 @@ const BioText = styled(motion.p)`
 const ReadMoreButton = styled.button`
   background: transparent;
   border: none;
-  color: rgba(197, 118, 249, 0.85);
+  color: rgba(210, 143, 255, 0.85);
   cursor: pointer;
   font-size: 0.9rem;
   padding: 0;
