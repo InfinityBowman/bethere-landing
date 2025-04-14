@@ -26,7 +26,7 @@ const NavLinks = styled.div`
 `;
 
 const NavLink = styled.a`
-  color: #94a3b8;
+  color:rgb(162, 176, 196);
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.2s ease;

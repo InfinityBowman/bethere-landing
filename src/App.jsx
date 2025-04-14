@@ -90,10 +90,15 @@ const Subtitle2 = styled(motion.p)`
 const LogoWrapper = styled(motion.div)`
   position: relative;
   width: 520px;
+  height: 175px;
   margin: 4rem auto 10rem auto;
-
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15), 0 4px 12px rgba(139, 92, 246, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
   @media (max-width: 768px) {
     width: 320px;
+    height: 107px;
+    border-radius: 30px;
   }
 `;
 
