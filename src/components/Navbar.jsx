@@ -1,19 +1,51 @@
 import styled from '@emotion/styled';
+import { keyframes } from '@emotion/react';
 import React from 'react';
+
+const glowAnimation = keyframes`
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+`;
 
 const Container = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 3rem;
+  padding: 0 2rem;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   z-index: 10;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      transparent,
+      transparent,
+      transparent,
+      transparent,
+      rgba(99, 102, 241, 0.8),
+      rgba(139, 92, 246, 0.8)
+    );
+    animation: ${glowAnimation} 6s infinite;
+  }
 
   @media (max-width: 768px) {
     padding: 0 2rem;
@@ -26,7 +58,7 @@ const NavLinks = styled.div`
 `;
 
 const NavLink = styled.a`
-  color:rgb(162, 176, 196);
+  color: rgb(162, 176, 196);
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.2s ease;

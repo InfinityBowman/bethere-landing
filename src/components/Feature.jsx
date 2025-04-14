@@ -32,23 +32,42 @@ const Content = styled(motion.div)`
     color: rgb(174, 186, 202);
     line-height: 1.6;
   }
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
 `;
 
 const GifWrapper = styled(motion.div)`
   border-radius: 16px;
+  margin-right: 1rem;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15), 0 4px 12px rgba(139, 92, 246, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: ${(props) => (props.isFeature ? '380px' : 'auto')};
   margin-left: ${(props) => (props.isFeature ? '6rem' : 'auto')};
+  max-width: 360px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const FeatureGif = styled.img`
-  width: 380px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   height: auto;
   border-radius: 16px;
+
+  @media (max-width: 768px) {
+    max-width: 300px;
+  }
 `;
 
 const Feature = ({ title, description, gifSrc, index }) => {
