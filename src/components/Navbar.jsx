@@ -42,7 +42,7 @@ const Navbar = () => {
       <NavLinks>
         <NavLink href="#features">Features</NavLink>
         <NavLink href="#tech">Tech Stack</NavLink>
-        {/* <NavLink href="#team">Our Team</NavLink> */}
+        <NavLink href="#team">Our Team</NavLink>
       </NavLinks>
     </Container>
   );
