@@ -98,7 +98,7 @@ const SocialLink = styled.a`
 `;
 
 const BioText = styled(motion.p)`
-  color:rgb(189, 201, 218);
+  color: rgb(189, 201, 218);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   overflow: hidden;
@@ -161,7 +161,11 @@ const teamMembers = [
   },
   {
     name: 'Griffin Walker',
-    bio: `I'm jus a lil guy who enjoys skeleton gifs!`,
+    bio: `My name is Griffin Walker and I am currently pursuing my Bachelors in Computer Science with certifications in both Data Science and Computer Systems! During my time at the University of Utah, I have found myself drawn towards fields such as compilers and operating systems in that they force me to understand the foundations of most modern day computing principles as they exist in core systems.
+
+    Despite my primary interests, I recognized during my senior capstone that I needed to branch my skill set out to more frontend development tools to get a more holistic understanding of how the world of software is connected. As a result, I chose to push my efforts forward with React Native in our project, BeThere, which is a geospatial photo sharing app that seeks to make sharing moments with your friends seamless. In addition to programming with the React Native framework, I learned an extent of web development in making a developer web app visualization tool to monitor the behavior of our clustering algorithm.
+
+    As far as my interests go, I’m an avid gamer and fencer (when able) besides being a hobbyist guitarist as well. My favorite kind of pass-time is to have fun catching up with friends in any of the aforementioned, and I love getting to know people over any kind of casual PvP experience. While programming is an important skill, I love to develop soft skills equally!`,
     image: GriffinWalker,
     email: 'grifwalker13@gmail.com',
     linkedin: 'https://www.linkedin.com/in/griffin-walker-a6972030a/',
