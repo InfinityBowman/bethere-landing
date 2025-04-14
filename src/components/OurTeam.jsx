@@ -153,7 +153,7 @@ const teamMembers = [
   },
   {
     name: 'Ethan Gilmore',
-    bio: `TBD`,
+    bio: `I'm jus a lil guy who enjoys his doggo!`,
     image: EthanGilmore,
     email: 'ethanmckgilmore@gmail.com',
     linkedin: 'https://www.linkedin.com/in/ethangilmore/',
@@ -161,7 +161,7 @@ const teamMembers = [
   },
   {
     name: 'Griffin Walker',
-    bio: `TBD`,
+    bio: `I'm jus a lil guy who enjoys skeleton gifs!`,
     image: GriffinWalker,
     email: 'grifwalker13@gmail.com',
     linkedin: 'https://www.linkedin.com/in/griffin-walker-a6972030a/',
