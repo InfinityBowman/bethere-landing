@@ -185,7 +185,7 @@ const features = [
   {
     title: 'Friends',
     description:
-      'Connect with friends and family to share your experiences. Add friends, view their shared moments, and stay connected.',
+      'Connect with friends and family to share your experiences. Add friends, view their shared moments, and stay connected. Block and hide content from those you don’t want to see or be seen by.',
     gifSrc: BeThereGif6,
   },
   {
