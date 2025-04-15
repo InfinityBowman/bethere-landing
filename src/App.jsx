@@ -95,6 +95,7 @@ const LogoWrapper = styled(motion.div)`
   box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15), 0 4px 12px rgba(139, 92, 246, 0.1);
   border-radius: 50px;
   overflow: hidden;
+
   @media (max-width: 768px) {
     width: 320px;
     height: 107px;
@@ -213,13 +214,13 @@ const App = () => {
         <TitleContent
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.8 }}
+          viewport={{ once: false, amount: 0.6, margin: '50px 0px' }}
           transition={{ duration: 1 }}
         >
           <LogoWrapper
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false, amount: 0.8 }}
+            viewport={{ once: false, amount: 0.6 }}
             transition={{ duration: 0.5 }}
           >
             {sparklePositions.map((pos, index) => (
@@ -234,9 +235,6 @@ const App = () => {
             <Logo
               src={BeThereLogo}
               alt="BeThere Logo"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.1 }}
             />
           </LogoWrapper>
           <Title

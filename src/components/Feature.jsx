@@ -20,7 +20,7 @@ const Content = styled(motion.div)`
   padding-right: 4rem;
 
   h2 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 8vw, 3rem);
     margin-bottom: 1.5rem;
     background: linear-gradient(120deg, #f876f9, #5dc3fa);
     -webkit-background-clip: text;
@@ -75,7 +75,7 @@ const Feature = ({ title, description, gifSrc, index }) => {
     <FeatureContainer
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: false, amount: 0.7 }}
+      viewport={{ once: false, amount: 0.6, margin: '100px 0px' }}
       transition={{ duration: 0.8 }}
     >
       <Content>
@@ -86,7 +86,7 @@ const Feature = ({ title, description, gifSrc, index }) => {
         <GifWrapper
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: false, amount: 0.6, margin: '100px 0px' }}
           transition={{
             duration: 1.2,
             type: 'spring',

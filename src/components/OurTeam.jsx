@@ -9,6 +9,14 @@ import JacobMaynard from '../assets/jacob_maynard.jpeg';
 const TeamSection = styled.section`
   padding: 4rem 4rem 12rem 4rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem 8rem 2rem;
+  }
 `;
 
 const Title = styled(motion.h1)`
@@ -23,8 +31,6 @@ const TeamGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
 
   @media (max-width: 968px) {
     grid-template-columns: 1fr;
