@@ -159,7 +159,7 @@ const teamMembers = [
   },
   {
     name: 'Ethan Gilmore',
-    bio: `I'm jus a lil guy who enjoys his doggo!`,
+    bio: `I’m extremely passionate about topics at the intersection of computer science and mathematics. I enjoy learning all I can as a student and software developer, and love applying my acquired knowledge in research settings. I’m driven to figure out how things work on a foundational level, and often find myself engrossed in the details. I am self-motivated and love developing my skills with personal, hands-on projects. I was raised with a strong work ethic, and taught to work efficiently as part of a team. I love trying new things and always give my best attempt in everything I do.`,
     image: EthanGilmore,
     email: 'ethanmckgilmore@gmail.com',
     linkedin: 'https://www.linkedin.com/in/ethangilmore/',
