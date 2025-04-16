@@ -18,13 +18,31 @@ const Container = styled.nav`
   overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 0 2rem;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 376px) {
+    padding: 0 0.5rem;
   }
 `;
 
 const NavLinks = styled.div`
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  @media (max-width: 376px) {
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 `;
 
 const NavLink = styled.a`

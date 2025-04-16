@@ -103,7 +103,7 @@ const steps = [
     number: '1.',
     title: 'Create Your Account',
     description:
-      'Download BeThere from Testflight and create your account using our Auth0 sign in. The app will ask for permissions to access your camera and location, and have you accept our Terms of Service and Privacy Policy. You will then be able to create your profile.',
+      'Download and install BeThere from Testflight and create your account using our Auth0 sign in. The app will ask for permissions to access your camera and location, and have you accept our Terms of Service and Privacy Policy. You will then be able to create your profile.',
     image: permissionsGif,
   },
   {
