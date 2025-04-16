@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { motion } from 'framer-motion';
-import EthanGilmore from '../assets/ethan_gilmore.jpeg';
-import GriffinWalker from '../assets/griffin_walker.jpg';
-import EdwardStanford from '../assets/edward_stanford.jpeg';
-import JacobMaynard from '../assets/jacob_maynard.jpeg';
+import EthanGilmore from '../assets/team/ethan_gilmore.jpeg';
+import GriffinWalker from '../assets/team/griffin_walker.jpg';
+import EdwardStanford from '../assets/team/edward_stanford.jpeg';
+import JacobMaynard from '../assets/team/jacob_maynard.jpeg';
 
 const TeamSection = styled.section`
   padding: 4rem 4rem 12rem 4rem;

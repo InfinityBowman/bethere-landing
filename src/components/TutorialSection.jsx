@@ -108,22 +108,22 @@ const steps = [
   },
   {
     number: '2.',
-    title: 'Camera',
+    title: 'Take Photos',
     description:
-      'The app will open to the camera screen. You can take photos and save them to your camera roll without uploading anything. You can also click the lock after you take a photo to mark it as private. This will only allow your friends to see it. Uploading photos will automatically add them to an album or create a new one.',
+      'The app will open to the camera screen. You can take photos and save them to your camera roll without uploading anything. You can also click the lock after you take a photo to mark it as private. This will only allow your friends to see it. Uploading photos will automatically add them to an album or create a new one. Before photos are shared publicly they are scanned for inappropriate content and may potentially be blocked, the same is true for profile photos.',
     image: cameraImage,
   },
   {
     number: '3.',
     title: 'Connect with Friends',
     description:
-      'Swipe to the right from the camera to get to your profile and click the friends icon in the top right to view your friend code and add your friends using their friend codes.',
+      'Swipe to the right from the camera to get to your profile and click the friends icon in the top right to view your friend code and add your friends using their friend codes. You can also view blocked users and change blocked content settings.',
     image: friendsGif,
   },
   {
     number: '4.',
     title: 'Browse Albums',
-    description: `Swipe   to the left from the camera to get to the albums screen. This will show yours and other nearby photos along with the number of people and photos in the album and a unique location based album name.`,
+    description: `Swipe to the left from the camera to get to the albums screen. This will show yours and other nearby photos along with the number of people and photos in the album and a unique location based album name.`,
     image: albumsImage,
   },
   {
@@ -137,7 +137,7 @@ const steps = [
     number: '6.',
     title: 'Photo Feed',
     description:
-      'Swipe to the left again to see the photo feed. The photo feed is a scrollable feed of all photos from the albums you belong to. You can like, save, and share photos from the feed as well.',
+      'Swipe to the left again to see the photo feed. The photo feed is a scrollable feed of all photos from the albums you belong to. You can like, save, and share photos from the feed as well as navigate to the album a photo was taken in using the three dots menu when clicking on a photo.',
     image: feedGif,
   },
 ];
@@ -164,7 +164,9 @@ const TutorialSection = () => {
             transition={{ duration: 0.6, delay: index * 0.1 }}
           >
             <StepContent>
-              <StepTitle>{step.number} {step.title}</StepTitle>
+              <StepTitle>
+                {step.number} {step.title}
+              </StepTitle>
               <StepDescription>{step.description}</StepDescription>
             </StepContent>
             {step.image && (
