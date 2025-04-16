@@ -12,6 +12,7 @@ import TechSection from './components/TechSection.jsx';
 import Feature from './components/Feature.jsx';
 import Navbar from './components/Navbar.jsx';
 import OurTeam from './components/OurTeam.jsx';
+import TutorialSection from './components/TutorialSection.jsx';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -266,6 +267,7 @@ const App = () => {
         </FeatureSection>
         <TechSection />
         <OurTeam />
+        <TutorialSection />
         <Subtitle2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

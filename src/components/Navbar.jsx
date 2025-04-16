@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/react';
 import React from 'react';
 
 const Container = styled.nav`
@@ -46,6 +45,7 @@ const Navbar = () => {
         <NavLink href="#features">Features</NavLink>
         <NavLink href="#tech">Tech Stack</NavLink>
         <NavLink href="#team">Our Team</NavLink>
+        <NavLink href="#tutorial">Tutorial</NavLink>
       </NavLinks>
     </Container>
   );
