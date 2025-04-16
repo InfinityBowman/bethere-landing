@@ -2,12 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import BeThereLogo from './assets/BeThere_Simple_Logo.png';
-import BeThereGif5 from './assets/BeThere Midpoint_5.gif';
-import BeThereGif3 from './assets/BeThere Midpoint_3.gif';
-import BeThereGif2 from './assets/BeThere Midpoint_2.gif';
-import BeThereGif6 from './assets/BeThere Midpoint_6.gif';
-import BeThereGif4 from './assets/BeThere Midpoint_4.gif';
-import BeThereGif from './assets/BeThere Midpoint.gif';
+import feed from './assets/feed.webm';
+import albums from './assets/albums.webm';
+import camera from './assets/camera.webm';
+import profile from './assets/profile.webm';
+import map from './assets/map.webm';
+import login from './assets/login.webm';
 import TechSection from './components/TechSection.jsx';
 import Feature from './components/Feature.jsx';
 import Navbar from './components/Navbar.jsx';
@@ -164,37 +164,37 @@ const features = [
     title: 'Dynamic Photo Clustering',
     description:
       'Experience intelligent organization of your shared moments. Our advanced clustering algorithms work to effortlessly gather photos together.',
-    gifSrc: BeThereGif4,
+    gifSrc: map,
   },
   {
     title: 'Photo Feed',
     description:
       'A personalized, scrollable feed showcasing the photos you care about most. Stay updated with your friends and events in real-time.',
-    gifSrc: BeThereGif5,
+    gifSrc: feed,
   },
   {
     title: 'Camera',
     description:
       'A flexible camera with zoom, flash, privacy features, and more. Capture moments with ease and share them instantly.',
-    gifSrc: BeThereGif2,
+    gifSrc: camera,
   },
   {
     title: 'Automatic Album Creation',
     description:
       'Creates albums on the fly with our intelligent clustering algorithms. Photos are grouped into albums by time and location and given a unique location-based name to easily find later.',
-    gifSrc: BeThereGif3,
+    gifSrc: albums,
   },
   {
     title: 'Friends',
     description:
       'Connect with friends and family to share your experiences. Add friends, view their shared moments, and stay connected. Block and hide content from those you don’t want to see or be seen by.',
-    gifSrc: BeThereGif6,
+    gifSrc: profile,
   },
   {
     title: 'Profile Creation',
     description:
       'Create a profile to share your moments with friends and family. Customize your profile with a unique username and avatar. Secure login and account creation with Auth0.',
-    gifSrc: BeThereGif,
+    gifSrc: login,
   },
 ];
 
@@ -260,7 +260,7 @@ const App = () => {
               key={index}
               title={feature.title}
               description={feature.description}
-              gifSrc={feature.gifSrc}
+              videoSrc={feature.gifSrc}
               index={index}
             />
           ))}

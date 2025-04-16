@@ -58,7 +58,7 @@ const GifWrapper = styled(motion.div)`
   }
 `;
 
-const FeatureGif = styled.img`
+const FeatureVideo = styled.video`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -70,7 +70,7 @@ const FeatureGif = styled.img`
   }
 `;
 
-const Feature = ({ title, description, gifSrc, index }) => {
+const Feature = ({ title, description, videoSrc, index }) => {
   return (
     <FeatureContainer
       initial={{ opacity: 0 }}
@@ -82,7 +82,7 @@ const Feature = ({ title, description, gifSrc, index }) => {
         <h2>{title}</h2>
         <p>{description}</p>
       </Content>
-      {gifSrc && (
+      {videoSrc && (
         <GifWrapper
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -93,9 +93,12 @@ const Feature = ({ title, description, gifSrc, index }) => {
             stiffness: 50,
           }}
         >
-          <FeatureGif
-            src={gifSrc}
-            alt={title}
+          <FeatureVideo
+            autoPlay
+            loop
+            muted
+            playsInline
+            src={videoSrc}
           />
         </GifWrapper>
       )}
