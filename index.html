@@ -5,14 +5,22 @@
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>BeThere - Share Moments as They Happen</title>
- <meta name="description"
-  content="BeThere | Capture life's precious moments in real-time." />
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
- <link rel="icon" href="/favicon.ico" />
+ <meta name="description" content="BeThere | Capture life's precious moments in real-time." />
  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+ <link rel="icon" href="/favicon.ico" />
+
+ <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+ <!-- Preload the font files -->
+ <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style"
+  onload="this.onload=null;this.rel='stylesheet'" />
+
+ <noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+ </noscript>
+
  <style>
   * {
    margin: 0;
