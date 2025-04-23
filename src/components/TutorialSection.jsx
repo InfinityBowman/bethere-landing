@@ -3,10 +3,10 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import albumsImage from '../assets//tutorial/albums.webp';
 import mapImage from '../assets//tutorial/map.webp';
-import camera from '../assets//camera.webm';
-import permissions from '../assets//tutorial/permissions.webm';
-import feed from '../assets//tutorial/feed.webm';
-import friends from '../assets//tutorial/friends.webm';
+import camera from '../assets//camera.mp4';
+import permissions from '../assets//tutorial/permissions.mp4';
+import feed from '../assets//tutorial/feed.mp4';
+import friends from '../assets//tutorial/friends.mp4';
 
 const TutorialContainer = styled.section`
   padding: 8rem 4rem;
