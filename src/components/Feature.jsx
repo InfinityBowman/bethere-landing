@@ -70,13 +70,13 @@ const FeatureVideo = styled.video`
   }
 `;
 
-const Feature = ({ title, description, videoSrc, index }) => {
+const Feature = ({ title, description, videoSrc, index, animationTiming }) => {
   return (
     <FeatureContainer
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: false, amount: 0.6, margin: '100px 0px' }}
-      transition={{ duration: 0.8 }}
+      viewport={{ once: false, amount: animationTiming.amount, margin: '100px 0px' }}
+      transition={{ duration: animationTiming.duration }}
     >
       <Content>
         <h2>{title}</h2>
@@ -86,9 +86,9 @@ const Feature = ({ title, description, videoSrc, index }) => {
         <GifWrapper
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.6, margin: '100px 0px' }}
+          viewport={{ once: false, amount: animationTiming.amount, margin: '100px 0px' }}
           transition={{
-            duration: 1.2,
+            duration: animationTiming.duration + 0.2,
             type: 'spring',
             stiffness: 50,
           }}

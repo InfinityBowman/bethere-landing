@@ -274,7 +274,7 @@ const CopySVG = () => (
   </svg>
 );
 
-const TeamMemberCard = ({ member, index }) => {
+const TeamMemberCard = ({ member, index, animationTiming }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const [isCopied, setIsCopied] = React.useState(false);
 
@@ -290,7 +290,7 @@ const TeamMemberCard = ({ member, index }) => {
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: false, amount: animationTiming.amount / 2 }}
     >
       <ImageWrapper>
         <img
@@ -360,7 +360,7 @@ const TeamMemberCard = ({ member, index }) => {
   );
 };
 
-const OurTeam = () => {
+const OurTeam = ({ animationTiming }) => {
   return (
     <TeamSection id="team">
       <Title>Our Team</Title>
@@ -370,6 +370,7 @@ const OurTeam = () => {
             key={member.name}
             member={member}
             index={index}
+            animationTiming={animationTiming}
           />
         ))}
       </TeamGrid>

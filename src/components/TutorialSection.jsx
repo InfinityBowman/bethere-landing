@@ -68,6 +68,14 @@ const StepVideo = styled.video`
   height: 100%;
   border-radius: 16px;
   display: block;
+  object-fit: cover;
+  transform: translateZ(0); // Force hardware acceleration
+  -webkit-transform: translateZ(0);
+  background-color: #1a1a1a; // Dark background while loading
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StepContent = styled.div`
@@ -85,12 +93,16 @@ const StepContent = styled.div`
 `;
 
 const StepImage = styled(motion.img)`
-  width: 260px;
+  width: 100%;
+  max-width: 260px;
   height: auto;
   border-radius: 16px;
+  object-fit: cover;
   box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
   animation: none;
   -webkit-animation: none;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 
   &[src$='.gif'] {
     image-rendering: auto;
@@ -168,14 +180,14 @@ const steps = [
   },
 ];
 
-const TutorialSection = () => {
+const TutorialSection = ({ animationTiming }) => {
   return (
     <TutorialContainer id="tutorial">
       <Title
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 'some' }}
-        transition={{ duration: 0.6 }}
+        viewport={{ once: false, amount: animationTiming.amount }}
+        transition={{ duration: animationTiming.duration }}
       >
         How to Use BeThere
       </Title>
@@ -186,8 +198,8 @@ const TutorialSection = () => {
             index={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 'some' }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: false, amount: animationTiming.amount }}
+            transition={{ duration: animationTiming.duration, delay: index * 0.1 }}
           >
             <StepContent>
               <StepTitle>
@@ -199,8 +211,8 @@ const TutorialSection = () => {
               <StepMedia
                 initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false, amount: 'some' }}
-                transition={{ duration: 0.6 }}
+                viewport={{ once: false, amount: animationTiming.amount }}
+                transition={{ duration: animationTiming.duration }}
               >
                 {step.type === 'video' ? (
                   <StepVideo
@@ -208,6 +220,7 @@ const TutorialSection = () => {
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                     src={step.image}
                   />
                 ) : (

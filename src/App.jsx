@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import BeThereLogo from './assets/BeThere_Simple_Logo.png';
@@ -208,6 +208,28 @@ const App = () => {
     { bottom: '15%', left: '45%', delay: 0.4 },
     { top: '30%', right: '50%', delay: 0.8 },
   ];
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Check on initial load
+    checkMobile();
+
+    // Add event listener for resize
+    window.addEventListener('resize', checkMobile);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const animationTiming = {
+    duration: isMobile ? 0.3 : 0.6,
+    amount: isMobile ? 0.1 : 0.6,
+  };
   return (
     <Container>
       <Navbar />
@@ -215,14 +237,14 @@ const App = () => {
         <TitleContent
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.6, margin: '50px 0px' }}
-          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: animationTiming.amount, margin: '50px 0px' }}
+          transition={{ duration: animationTiming.duration }}
         >
           <LogoWrapper
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false, amount: 0.6 }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: false, amount: animationTiming.amount }}
+            transition={{ duration: animationTiming.duration }}
           >
             {sparklePositions.map((pos, index) => (
               <Sparkle
@@ -262,12 +284,13 @@ const App = () => {
               description={feature.description}
               videoSrc={feature.gifSrc}
               index={index}
+              animationTiming={animationTiming}
             />
           ))}
         </FeatureSection>
         <TechSection />
-        <OurTeam />
-        <TutorialSection />
+        <OurTeam animationTiming={animationTiming} />
+        <TutorialSection animationTiming={animationTiming}/>
         <Subtitle2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
