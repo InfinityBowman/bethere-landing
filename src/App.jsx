@@ -275,6 +275,16 @@ const App = () => {
             BeThere lets you instantly share your experiences with friends and family. Capture life's precious moments
             in real-time.
           </Subtitle>
+          <GithubButton
+            href="https://testflight.apple.com/join/QgX4d8tc"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2 }}
+          >
+            Download the app on iOS
+          </GithubButton>
         </TitleContent>
         <FeatureSection id="features">
           {features.map((feature, index) => (
@@ -290,7 +300,7 @@ const App = () => {
         </FeatureSection>
         <TechSection />
         <OurTeam animationTiming={animationTiming} />
-        <TutorialSection animationTiming={animationTiming}/>
+        <TutorialSection animationTiming={animationTiming} />
         <Subtitle2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
