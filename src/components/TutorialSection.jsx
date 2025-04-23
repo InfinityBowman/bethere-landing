@@ -186,7 +186,7 @@ const TutorialSection = ({ animationTiming }) => {
       <Title
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: animationTiming.amount }}
+        viewport={{ once: false, amount: 'some' }}
         transition={{ duration: animationTiming.duration }}
       >
         How to Use BeThere
@@ -198,7 +198,7 @@ const TutorialSection = ({ animationTiming }) => {
             index={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: animationTiming.amount }}
+            viewport={{ once: false, amount: 'some' }}
             transition={{ duration: animationTiming.duration, delay: index * 0.1 }}
           >
             <StepContent>
@@ -211,7 +211,7 @@ const TutorialSection = ({ animationTiming }) => {
               <StepMedia
                 initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false, amount: animationTiming.amount }}
+                viewport={{ once: false, amount: 'some' }}
                 transition={{ duration: animationTiming.duration }}
               >
                 {step.type === 'video' ? (
