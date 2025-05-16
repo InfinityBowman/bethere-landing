@@ -281,7 +281,7 @@ const App = () => {
             rel="noopener noreferrer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 0.6 }}
           >
             Download the app on iOS
           </GithubButton>
